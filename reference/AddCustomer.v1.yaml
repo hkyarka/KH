@@ -2,9 +2,9 @@ openapi: 3.0.0
 info:
   title: AddCustomer
   version: '1.0'
-  description: Yeni bir müşteri oluşturmaya yarar.
+  description: 'Yeni bir müşteri oluşturmaya yarar. Müşteri daha önceden kayıtlıysa gönderilen parametre ile üzerine yazılsın mı yazılmasın mı belirlenebilir. Bir class şeklinde müşteri bilgileri '
 servers:
-  - url: 'http://localhost:3000'
+  - url: /api/AddCustomer
 paths:
   '/users/{userId}':
     parameters:
@@ -187,3 +187,7 @@ components:
         - lastName
         - email
         - emailVerified
+  securitySchemes:
+    API Key - 1:
+      type: http
+      scheme: bearer

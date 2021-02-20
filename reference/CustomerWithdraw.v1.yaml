@@ -2,6 +2,7 @@ openapi: 3.0.0
 info:
   title: CustomerWithdraw
   version: '1.0'
+  description: 'Müşterinin hesabından para çekme apisidir. '
 servers:
   - url: 'http://localhost:3000'
 paths:

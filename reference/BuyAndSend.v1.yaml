@@ -2,8 +2,9 @@ openapi: 3.0.0
 info:
   title: BuyAndSend
   version: '1.0'
+  description: Bitcoin alıp başka bir heesaba gönderme apisidir.
 servers:
-  - url: 'http://localhost:3000'
+  - url: /api/BuyAndSend
 paths:
   '/users/{userId}':
     parameters:
@@ -186,3 +187,7 @@ components:
         - lastName
         - email
         - emailVerified
+  securitySchemes:
+    API Key - 1:
+      type: http
+      scheme: bearer
