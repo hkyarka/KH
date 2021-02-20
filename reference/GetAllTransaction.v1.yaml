@@ -1,13 +1,9 @@
 openapi: 3.0.0
 info:
-  title: GetToken
+  title: GetAllTransaction
   version: '1.0'
-  description: JWT Bearer Token Alma
-  license:
-    name: KH Teknoloji A.Ş.
-    url: 'https://bitcoturk.com'
 servers:
-  - url: 'http://api.bitcoturk.com'
+  - url: 'http://localhost:3000'
 paths:
   '/users/{userId}':
     parameters:
@@ -147,21 +143,6 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
-  '/https://api.bitcoturk.com':
-    get:
-      summary: GetToken
-      tags: []
-      operationId: 'get-https:-api.bitcoturk.com'
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: userName
-        - schema:
-            type: string
-          in: query
-          name: password
-      deprecated: true
 components:
   schemas:
     User:
@@ -205,20 +186,3 @@ components:
         - lastName
         - email
         - emailVerified
-  securitySchemes:
-    API Key - 1:
-      name: API Key
-      type: apiKey
-      in: query
-  examples:
-    Deneme:
-      value:
-        description: Example shared example
-        type: object
-        properties:
-          id:
-            type: string
-        required:
-          - id
-security:
-  - API Key - 1: []
